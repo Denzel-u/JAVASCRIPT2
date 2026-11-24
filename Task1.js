@@ -1,12 +1,14 @@
-for (let a = 1; a <= 9; a++) {
-    for (let b = 0; b <= 9; b++) {
-        for (let c = 0; c <= 9; c++) {
+for (let hundreds = 1; hundreds <= 9; hundreds++) {
+    for (let tens = 0; tens <= 9; tens++) {
+        for (let units = 0; units <= 9; units++) {
 
-            let number = a * 100 + b * 10 + c;
+            let number = hundreds * 100 + tens * 10 + units;
 
-            let sum = (a * a) + (b * b) + (c * c);
+            let sum = (hundreds * hundreds) +
+                      (tens * tens) +
+                      (units * units);
 
-            if (number === sum) {
+            if (sum == number) {
                 console.log(number);
             }
         }
